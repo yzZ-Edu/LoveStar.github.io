@@ -4,73 +4,94 @@
     <meta charset="UTF-8">
     <title>Certificado de Nomeação de Estrela</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap');
+
         body {
-          background: #0d1b2a;
-          color: #fff;
-          font-family: 'Georgia', serif;
+          background: #fefae0;
+          font-family: 'Cormorant Garamond', serif;
           display: flex;
           justify-content: center;
           align-items: center;
-          flex-direction: column;
           height: 100vh;
           margin: 0;
+          padding: 20px;
         }
 
         .certificado {
-          background: #1b263b;
-          border: 8px double #e0e1dd;
-          padding: 40px;
+          background: #ffffff;
+          border: 10px double #333;
+          padding: 50px;
+          max-width: 800px;
+          width: 100%;
           text-align: center;
-          max-width: 700px;
-          border-radius: 12px;
-          box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+          position: relative;
         }
 
-        .certificado h1 {
-          font-size: 32px;
+        .certificado::before {
+          content: "";
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          right: 20px;
+          bottom: 20px;
+          border: 2px dashed #bbb;
+          pointer-events: none;
+        }
+
+        h1 {
+          font-size: 36px;
           margin-bottom: 10px;
-          color: #f4d35e;
+          color: #222;
+          font-weight: 700;
         }
 
-        .certificado h2 {
+        h2 {
           font-size: 24px;
-          margin: 20px 0;
-          color: #ffffff;
+          color: #444;
+          margin: 30px 0 10px;
         }
 
-        .certificado p {
-          font-size: 18px;
-          color: #d9d9d9;
-          line-height: 1.6;
+        p {
+          font-size: 20px;
+          color: #555;
+          margin: 10px 0;
         }
 
-        .estrela {
-          font-size: 26px;
+        .nome {
+          font-size: 28px;
+          color: #b08968;
+          font-weight: 700;
           margin: 20px 0;
-          color: #90e0ef;
         }
 
         .assinatura {
+          font-family: 'Brush Script MT', cursive;
+          font-size: 26px;
           margin-top: 40px;
-          font-style: italic;
-          color: #adb5bd;
+          color: #777;
+        }
+
+        .data {
+          font-size: 16px;
+          margin-top: 5px;
         }
 
         #btn-video {
           margin-top: 30px;
-          padding: 10px 20px;
-          font-size: 16px;
-          background-color: #f4d35e;
+          padding: 10px 25px;
+          font-size: 18px;
+          background-color: #b08968;
           border: none;
-          border-radius: 8px;
+          border-radius: 5px;
           cursor: pointer;
-          color: #000;
+          color: white;
           font-weight: bold;
           transition: background-color 0.3s ease;
         }
 
         #btn-video:hover {
-          background-color: #ffe066;
+          background-color: #d4a373;
         }
 
         #video-container {
@@ -79,12 +100,12 @@
           animation: fadeIn 1s forwards;
         }
 
-        video {
-          width: 320px;
-          height: 180px;
-          border: 4px solid #f4d35e;
-          border-radius: 12px;
-          box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        #video-container img {
+          width: 300px;
+          height: auto;
+          border: 2px solid #b08968;
+          border-radius: 6px;
+          box-shadow: 0 0 6px rgba(0,0,0,0.2);
         }
 
         @keyframes fadeIn {
@@ -96,17 +117,20 @@
 <body>
 <div class="certificado">
     <h1>Certificado de Nomeação de Estrela</h1>
-    <p>Este documento certifica que uma estrela no céu foi oficialmente nomeada em homenagem a:</p>
-    <div class="estrela">🌟 <strong>Ana</strong> 🌟</div>
+    <p>Certificamos que uma estrela no céu foi oficialmente nomeada em homenagem a:</p>
+
+    <div class="nome">🌟 Ana 🌟</div>
+
     <p>Que seu brilho eterno ilumine os corações assim como você ilumina o meu.</p>
+
     <h2>Com amor eterno,</h2>
-    <p>Seu astrônomo particular 💫</p>
-    <div class="assinatura">Data: 04 de abril de 2025</div>
+    <div class="assinatura">Seu astrônomo particular 💫</div>
+    <div class="data">04 de abril de 2025</div>
 
     <button id="btn-video">Ver Estrela</button>
 
     <div id="video-container">
-      <img src="Star_Gif.gif" alt="Estrela Brilhante">
+        <img src="Star_Gif.gif" alt="Estrela brilhante">
     </div>
 </div>
 
