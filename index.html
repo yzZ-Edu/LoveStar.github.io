@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Certificado de Nomeação de Estrela</title>
+    <style>
+        body {
+          background: #0d1b2a;
+          color: #fff;
+          font-family: 'Georgia', serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          height: 100vh;
+          margin: 0;
+        }
+
+        .certificado {
+          background: #1b263b;
+          border: 8px double #e0e1dd;
+          padding: 40px;
+          text-align: center;
+          max-width: 700px;
+          border-radius: 12px;
+          box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        .certificado h1 {
+          font-size: 32px;
+          margin-bottom: 10px;
+          color: #f4d35e;
+        }
+
+        .certificado h2 {
+          font-size: 24px;
+          margin: 20px 0;
+          color: #ffffff;
+        }
+
+        .certificado p {
+          font-size: 18px;
+          color: #d9d9d9;
+          line-height: 1.6;
+        }
+
+        .estrela {
+          font-size: 26px;
+          margin: 20px 0;
+          color: #90e0ef;
+        }
+
+        .assinatura {
+          margin-top: 40px;
+          font-style: italic;
+          color: #adb5bd;
+        }
+
+        #btn-video {
+          margin-top: 30px;
+          padding: 10px 20px;
+          font-size: 16px;
+          background-color: #f4d35e;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          color: #000;
+          font-weight: bold;
+          transition: background-color 0.3s ease;
+        }
+
+        #btn-video:hover {
+          background-color: #ffe066;
+        }
+
+        #video-container {
+          margin-top: 30px;
+          display: none;
+          animation: fadeIn 1s forwards;
+        }
+
+        video {
+          width: 320px;
+          height: 180px;
+          border: 4px solid #f4d35e;
+          border-radius: 12px;
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes fadeIn {
+          from { opacity: 0; transform: scale(0.95); }
+          to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+<div class="certificado">
+    <h1>Certificado de Nomeação de Estrela</h1>
+    <p>Este documento certifica que uma estrela no céu foi oficialmente nomeada em homenagem a:</p>
+    <div class="estrela">🌟 <strong>Ana</strong> 🌟</div>
+    <p>Que seu brilho eterno ilumine os corações assim como você ilumina o meu.</p>
+    <h2>Com amor eterno,</h2>
+    <p>Seu astrônomo particular 💫</p>
+    <div class="assinatura">Data: 04 de abril de 2025</div>
+
+    <button id="btn-video">Ver Estrela</button>
+
+    <div id="video-container">
+        <video controls>
+          <img src="https://github.com/yzZ-Edu/LoveStar.github.io/blob/main/Star_Gif.gif" alt="Estrela brilhando" width="320" height="180" style="border: 4px solid #f4d35e; border-radius: 12px; box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);">
+            Seu navegador não suporta a reprodução de vídeo.
+        </video>
+    </div>
+</div>
+
+<script>
+    const btn = document.getElementById('btn-video');
+    const videoContainer = document.getElementById('video-container');
+
+    btn.addEventListener('click', () => {
+      videoContainer.style.display = 'block';
+      btn.style.display = 'none';
+    });
+</script>
+</body>
+</html>
